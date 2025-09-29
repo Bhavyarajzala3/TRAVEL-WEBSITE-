@@ -1,0 +1,430 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+
+/* General Body & Font Styles */
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdfaf6; /* Warm off-white background */
+    color: #333;
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Header and Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 1rem 5%;
+    position: fixed;
+    width: 90%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #1a3c40; /* Dark Teal */
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #41827e; /* Lighter Teal for hover */
+}
+
+/* Hero Banner */
+header {
+    background: url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1000') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero-banner {
+    background: rgba(0, 0, 0, 0.55);
+    padding: 2.5rem;
+    border-radius: 10px;
+}
+
+.hero-banner h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #41827e; /* Lighter Teal */
+    color: white;
+    padding: 14px 28px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #1a3c40; /* Darker Teal */
+    transform: translateY(-2px);
+}
+
+/* Main Content & Sections */
+main {
+    padding: 2rem 5%;
+}
+
+.page-content {
+    padding-top: 100px; /* Add spacing for pages with fixed navbar */
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #1a3c40;
+    margin-bottom: 3rem;
+}
+
+/* Destinations Section */
+.destinations-section {
+    padding: 4rem 0;
+}
+
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.destination-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+/* Travel Packages Section */
+.packages-section {
+    padding: 4rem 0;
+    background-color: #fff;
+}
+
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.package-card {
+    background: #fdfaf6; /* Warm off-white */
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.package-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+.package-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.package-content {
+    padding: 1.5rem;
+}
+
+.package-content h3 {
+    margin-top: 0;
+    color: #1a3c40;
+}
+
+.package-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+    font-weight: bold;
+    color: #333;
+}
+
+.price {
+    color: #41827e;
+    font-size: 1.2rem;
+}
+
+.btn-book {
+    display: block;
+    width: 100%;
+    background-color: #1a3c40; /* Dark Teal */
+    color: white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-book:hover {
+    background-color: #2c5d63;
+}
+
+/* Gallery Section */
+.gallery-section {
+    padding: 4rem 0;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    opacity: 0.85;
+    cursor: pointer;
+}
+
+/* About Page Specifics */
+.about-page-background {
+    background: linear-gradient(rgba(26, 60, 64, 0.7), rgba(26, 60, 64, 0.7)), url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1000') no-repeat center center/cover;
+    background-attachment: fixed;
+    color: white;
+}
+
+.content-box {
+    background: rgba(0, 0, 0, 0.6);
+    margin: 2rem auto;
+    padding: 2.5rem;
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+/* Contact Page Specifics */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.contact-form {
+    flex: 2;
+    min-width: 300px;
+}
+
+.contact-details {
+    flex: 1;
+    min-width: 300px;
+}
+
+form label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #555;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+}
+form input:focus, form select:focus, form textarea:focus {
+    outline: none;
+    border-color: #41827e;
+    box-shadow: 0 0 5px rgba(65, 130, 126, 0.5);
+}
+
+form button {
+    width: 100%;
+    padding: 14px;
+    background-color: #1a3c40;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #2c5d63;
+}
+
+.gender-options {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.gender-options input {
+    width: auto;
+}
+
+.social-icons a {
+    color: #333;
+    font-size: 1.5rem;
+    margin-right: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #41827e;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #1a3c40; /* Dark Teal */
+    color: white;
+    margin-top: 2rem;
+}
+
+
+/* =================================== */
+/* MEDIA QUERIES FOR RESPONSIVENESS   */
+/* =================================== */
+
+@media screen and (max-width: 768px) {
+    
+    /* Adjust navigation for mobile */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 5%;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .nav-links li {
+        padding: 0.5rem 0;
+        width: 100%;
+        text-align: left;
+    }
+
+    /* Make hero text smaller on mobile */
+    .hero-banner h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-banner p {
+        font-size: 1rem;
+    }
+    
+    .hero-banner {
+        padding: 1.5rem;
+    }
+    
+    /* Adjust main headings */
+    h2 {
+        font-size: 2rem;
+    }
+    
+    /* Adjust padding for main content */
+    main#home-main {
+        padding-top: 0; /* Home page main content doesn't need top padding */
+    }
+
+    .page-content {
+        padding-top: 130px; /* Add padding to prevent content from hiding behind the taller mobile nav */
+    }
+    
+    .contact-container {
+        padding: 1.5rem;
+    }
+
+    /* Adjust grid gaps */
+    .destinations-grid, .packages-grid {
+        gap: 1.5rem;
+    }
+
+}
